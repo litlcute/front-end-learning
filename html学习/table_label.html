@@ -7,13 +7,14 @@
     <title>表格标签学习</title>
 </head>
 <body>
-    <table border=”1” width=”500” height=”300”>
+    <table border=”1” width=”700” height=”300”>
+        <caption><b>统计</b></caption>
         <!-- table 包含tr， tr包含td -->
         <!-- 第一行 -->
         <tr>
-            <td>课程</td>
-            <td>学分</td>
-            <td>得分</td>
+            <th>课程</th>
+            <th>学分</th>
+            <th>得分</th>
         </tr>
         <!-- 第二行 -->
         <tr>
@@ -33,6 +34,85 @@
             <td>6</td>
             <td>90</td>
         </tr>
+    </table>
+
+<!-- 带表格结构的 -->
+    <table border=”1” width=”700” height=”300”>
+        <caption><b>统计</b></caption>
+        <!-- table 包含tr， tr包含td -->
+        <!-- 第一行 -->
+        <thead>
+            <tr>
+                <th>课程</th>
+                <th>学分</th>
+                <th>得分</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <!-- 第二行 -->
+            <tr>
+                <td>9021</td>
+                <td>6</td>
+                <td>90</td>
+            </tr>
+            <!-- 第三行 -->
+            <tr>
+                <td>9024</td>
+                <td>6</td>
+                <td>90</td>
+            </tr>
+        </tbody>
+        
+        <tfoot>
+            <!-- 第四行 -->
+            <tr>
+                <td>9820</td>
+                <td>6</td>
+                <td>90</td>
+            </tr>
+        </tfoot>
+        
+    </table>
+
+
+    <!-- 带表格结构的合并单元格 -->
+    <table border=”1” width=”700” height=”300”>
+        <caption><b>统计</b></caption>
+        <!-- table 包含tr， tr包含td -->
+        <!-- 第一行 -->
+        <thead>
+            <tr>
+                <th>课程</th>
+                <th>学分</th>
+                <th>得分</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <!-- 第二行 -->
+            <tr>
+                <td>9021</td>
+                <td rowspan="2">6</td>
+                <td>90</td>
+            </tr>
+            <!-- 第三行 -->
+            <tr>
+                <td>9024</td>
+                <!-- <td>6</td> -->
+                <td>90</td>
+            </tr>
+        </tbody>
+        
+        <tfoot>
+            <!-- 第四行 -->
+            <tr>
+                <td>9820</td>
+                <td colspan="2">6</td>
+                <!-- <td>90</td> -->
+            </tr>
+        </tfoot>
+        
     </table>
 </body>
 </html>
